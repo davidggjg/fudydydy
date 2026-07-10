@@ -20,7 +20,7 @@ def fallback():
     b64 = os.environ.get("GOOGLE_SERVICES_JSON_BASE64", "")
     if b64:
         with open("android/app/google-services.json", "wb") as f:
-            f.write(base64.b64decode(b64))
+            f.write(base64.b64decode(b64))vfd
         print("Wrote google-services.json from static secret (fallback)")
     else:
         print("WARNING: no GOOGLE_SERVICES_JSON_BASE64 secret found")
